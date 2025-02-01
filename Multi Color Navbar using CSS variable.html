@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar Multi Color</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --but-bg-color: rgb(126 34 206);
+        --but-text-color: white;
+        --bg-color: rgb(228, 226, 226);
+        --text-color:black;
+      }
+      body {
+        font-family: "Baloo Bhaijaan 2", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        background-color: var(--bg-color);
+      }
+      nav {
+        display: flex;
+        padding: 20px 10px;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.482);
+      }
+
+      nav span {
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding: 5px 5px 5px 28px;
+      }
+      nav span a {
+        text-decoration: none;
+        color: var(--but-bg-color);
+      }
+
+      nav ul {
+        margin-left: 22vw;
+        display: inline;
+        padding: 5px;
+        display: flex;
+      }
+      nav ul li {
+        padding: 7px;
+        list-style: none;
+        color: green;
+      }
+      .mode {
+        padding: 0;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: var(--text-color);
+      }
+      nav ul li svg {
+        color: var(--but-bg-color);
+        margin-left: 5px;
+        cursor: pointer;
+      }
+      .but {
+        margin: 4px 5px;
+        width: 60px;
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--but-bg-color);
+        color: var(--but-text-color);
+        cursor: pointer;
+      }
+     
+      main {
+        width: 100vw;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .change-but {
+        font-size: 30px;
+        font-family: "Baloo Bhaijaan 2";
+        padding: 8px 17px;
+        border-radius: 10px;
+        border: 1px solid var(--but-text-color);
+        color: var(--but-text-color);
+        background-color: var(--but-bg-color);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <span class="logo">
+          <a href="https://www.codewithharry.com/">&lt;/&gt;CodeWithRafay</a>
+        </span>
+        <ul>
+          <li><a href="https://www.codewithharry.com/ ">Home</a></li>
+          <li><a href="https://www.codewithharry.com/videos/">Courses</a></li>
+          <li>
+            <a href="https://www.codewithharry.com/tutorials/">Tutorial</a>
+          </li>
+          <li><a href="https://www.codewithharry.com/blog/">Blog</a></li>
+          <li><a href="https://www.codewithharry.com/notes/">Notes</a></li>
+          <li><a href="https://www.codewithharry.com/contact/">Contact</a></li>
+          <li><a href="https://www.codewithharry.com/my-gear/">My Gear</a></li>
+          <li>
+            <a href="https://www.codewithharry.com/work/">Work With Us</a>
+          </li>
+          <li class="mode">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 16 16"
+              height="28"
+              width="28"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+              ></path>
+              <path
+                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+              ></path>
+            </svg>
+          </li>
+        </ul>
+        <button class="but">Login</button>
+        <button class="but">Signup</button>
+      </nav>
+    </header>
+
+    <main>
+      <button onclick="Color_Change()" class="change-but">Change Color</button>
+    </main>
+
+    <script>
+
+      const Color_Change = () => {
+        let bg_color = prompt("What background color do you want? You can enter a HEX code, RGB value, or a color name:");
+          let text_color = prompt("What text color do you want? You can enter a HEX code, RGB value, or a color name:");
+          let but_text_color = prompt("What button text color do you want? You can enter a HEX code, RGB value, or a color name:");
+          let but_bg_color = prompt("What button background color do you want? You can enter a HEX code, RGB value, or a color name:");
+
+          // Apply the user input to CSS variables
+          document.documentElement.style.setProperty('--bg-color', bg_color);
+          document.documentElement.style.setProperty('--text-color', text_color);
+          document.documentElement.style.setProperty('--but-text-color', but_text_color);
+          document.documentElement.style.setProperty('--but-bg-color', but_bg_color);
+        };
+    </script>
+  </body>
+</html>
